@@ -5,7 +5,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def isValid(root, low=float('-inf'), high=float('inf')):
+def isValid(curr_node, low=float('-inf'), high=float('inf')):
     """
     Validate if a tree is a binary search tree (BST).
     
@@ -23,16 +23,16 @@ def isValid(root, low=float('-inf'), high=float('inf')):
     
 
     # The value of the current node must be within the range (low, high).
-    if not (low < root.val < high):
+    if not (low < curr_node.val < high):
         return False
 
     # Recursively check the left subtree, updating the upper bound.
     # The left child's value must be less than the current node's value.
-    leftIsValid = isValid(root.left, low, root.val)
+    leftIsValid = isValid(curr_node.left, low, curr_node.val)
 
     # Recursively check the right subtree, updating the lower bound.
     # The right child's value must be greater than the current node's value.
-    rightIsValid = isValid(root.right, root.val, high)
+    rightIsValid = isValid(curr_node.right, curr_node.val, high)
 
     # The current subtree is a BST if both left and right subtrees are BSTs.
     return leftIsValid and rightIsValid
@@ -48,7 +48,5 @@ root.left = TreeNode(1)
 root.right = TreeNode(4)
 root.right.left = TreeNode(3)
 root.right.right = TreeNode(6)
-
-
-
 print(isValid(root))
+
