@@ -20,6 +20,7 @@ def isValid(root, low=float('-inf'), high=float('inf')):
     # Base case: An empty tree is a valid BST.
     if not root:
         return True
+    
 
     # The value of the current node must be within the range (low, high).
     if not (low < root.val < high):
