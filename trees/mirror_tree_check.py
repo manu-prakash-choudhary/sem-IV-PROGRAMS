@@ -1,7 +1,3 @@
-# Python3 program to check if two
-# trees are mirror of each other
-
-# A binary tree node
 class Node:
 	def __init__(self, data):
 		self.data = data
