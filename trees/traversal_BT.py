@@ -1,4 +1,4 @@
-# Write a Program to Understand and implement Tree traversals i.e. Pre-Order Post-Order, In-Order
+# 10. Write a Program to Understand and implement Tree traversals i.e. Pre-Order Post-Order, In-Order
 
 # binary tree traversal
 class node:

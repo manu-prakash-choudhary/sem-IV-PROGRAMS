@@ -1,3 +1,4 @@
+# 18. Write a Program to view a tree from left View
 class Node:
     def __init__(self, data):
         self.data = data

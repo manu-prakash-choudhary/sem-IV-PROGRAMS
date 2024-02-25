@@ -39,23 +39,23 @@ Retrieve the min element from the stack
 
 9. Write a Program to Swap Nodes pairwise
 
-10. Write a Program to Understand and implement Tree traversals i.e. Pre-Order Post-Order, In-Order
+~~10. Write a Program to Understand and implement Tree traversals i.e. Pre-Order Post-Order, In-Order~~
 
- 11. Write a Program to verify and validate mirrored trees or not
+11. Write a Program to verify and validate mirrored trees or not
 
-12. Write a Program to determine the depth of a given Tree by Implementing     MAXDEPTH 
+~~12. Write a Program to determine the depth of a given Tree by Implementing     MAXDEPTH ~~
 
-13. Write a program for Lowest Common Ancestors
+~~13. Write a program for Lowest Common Ancestors~~
 
-14. Write a Program to Build BST
+~~14. Write a Program to Build BST~~
 
-15. Write a Program for Building a Function ISVALID to VALIDATE BST 
+~~15. Write a Program for Building a Function ISVALID to VALIDATE BST ~~
 
-16. Write a Program to Traverse a Tree using Level Order Traversal
+~~16. Write a Program to Traverse a Tree using Level Order Traversal~~
 
-17.  Write a Program to perform Boundary Traversal on BST
+~~17.  Write a Program to perform Boundary Traversal on BST~~
 
-18. Write a Program to view a tree from left View
+~~18. Write a Program to view a tree from left View~~
 
 19. Write a Program for a basic hash function in a programming language of your choice. Demonstrate its usage to store and retrieve key-value pairs.
 
