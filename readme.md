@@ -49,7 +49,7 @@ Retrieve the min element from the stack
 
 ~~14. Write a Program to Build BST~~
 
-~~15. Write a Program for Building a Function ISVALID to VALIDATE BST ~~
+~~15. Write a Program for Building a Function ISVALID to VALIDATE BST.~~
 
 ~~16. Write a Program to Traverse a Tree using Level Order Traversal~~
 
