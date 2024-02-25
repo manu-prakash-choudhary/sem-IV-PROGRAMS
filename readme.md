@@ -41,7 +41,7 @@ Retrieve the min element from the stack
 
 ~~10. Write a Program to Understand and implement Tree traversals i.e. Pre-Order Post-Order, In-Order~~
 
-11. Write a Program to verify and validate mirrored trees or not
+~~11. Write a Program to verify and validate mirrored trees or not~~
 
 ~~12. Write a Program to determine the depth of a given Tree by Implementing MAXDEPTH~~
 
