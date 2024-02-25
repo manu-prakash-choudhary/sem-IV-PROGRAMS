@@ -43,7 +43,7 @@ Retrieve the min element from the stack
 
 11. Write a Program to verify and validate mirrored trees or not
 
-~~12. Write a Program to determine the depth of a given Tree by Implementing     MAXDEPTH ~~
+~~12. Write a Program to determine the depth of a given Tree by Implementing MAXDEPTH ~~
 
 ~~13. Write a program for Lowest Common Ancestors~~
 
