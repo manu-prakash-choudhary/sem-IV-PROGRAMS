@@ -1,27 +1,15 @@
-class TreeNode:
-    """A class for a tree node."""
+class Node:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
-def isValid(curr_node, low=float('-inf'), high=float('inf')):
-    """
-    Validate if a tree is a binary search tree (BST).
-    
-    Args:
-    - root: TreeNode, the root of the binary tree.
-    - low: Lower bound for the current node's value.
-    - high: Upper bound for the current node's value.
-    
-    Returns:
-    - bool: True if the tree is a valid BST, False otherwise.
-    """
+def isValid(curr_node, low, high):
+
     # Base case: An empty tree is a valid BST.
-    if not root:
+    if curr_node is None:
         return True
     
-
     # The value of the current node must be within the range (low, high).
     if not (low < curr_node.val < high):
         return False
@@ -38,15 +26,22 @@ def isValid(curr_node, low=float('-inf'), high=float('inf')):
     return leftIsValid and rightIsValid
 
 
-root = TreeNode(2)
-root.left = TreeNode(1)
-root.right = TreeNode(3)
+root = Node(5)
+root.left = Node(1)
+root.right = Node(4)
+root.right.left = Node(3)
+root.right.right = Node(6)
+result = isValid(root, float('-inf'), float('inf'))
+if result == True:
+    print("Given Binary Tree is valid BST")
+else:
+    print("Given Binary tree is not a valid BST")
 
-print(isValid(root))
-root = TreeNode(5)
-root.left = TreeNode(1)
-root.right = TreeNode(4)
-root.right.left = TreeNode(3)
-root.right.right = TreeNode(6)
-print(isValid(root))
-
+# Lets take example of below tree
+#      5
+#     / \
+#    1    7
+#  / \   /  \
+#       3    6
+#      / \  / \
+# The above tree is not a valid BST because the right child of 4 is 3 which is less than 4.

@@ -6,7 +6,6 @@ class Node:
         self.right = None
 
 root = Node(1)
-
 root.left = Node(2)
 root.left.left = Node(4)
 root.left.right = Node(5)
@@ -22,11 +21,15 @@ def leftView(node):
     q = [(0, node)]
     level_Nodes_dict = dict()
     while len(q) > 0 :
-        curr_level, curr_node = q.pop(0)
+        curr_tuple = q.pop(0)
+        curr_level = curr_tuple[0]
+        curr_node = curr_tuple[1]
+
         if curr_level in level_Nodes_dict:
             level_Nodes_dict[curr_level].append(curr_node.data)
         else:
-            level_Nodes_dict[curr_level] = [curr_node.data]
+            level_Nodes_dict[curr_level] = []
+            level_Nodes_dict[curr_level].append(curr_node.data)
         if curr_node.left:
             q.append((curr_level+1, curr_node.left))
         if curr_node.right:
@@ -35,8 +38,11 @@ def leftView(node):
     return level_Nodes_dict
 
 returned_dict = leftView(root)
-for key,values in returned_dict.items():
-    print(values[0])
+# for key,values in returned_dict.items():
+#     print(values[0])
+for key in returned_dict:
+    print(returned_dict[key][0], end=" ")
+
 print()
 
 # https://dpaste.org/WxxL6
