@@ -13,9 +13,15 @@ def findLCA(curr_node, n1, n2):
         return curr_node
     left_lca = findLCA(curr_node.left, n1, n2)
     right_lca = findLCA(curr_node.right, n1, n2)
-    if left_lca and right_lca:
+    if left_lca is not None and right_lca is not None:
         return curr_node
-    return left_lca if left_lca is not None else right_lca
+    
+    if left_lca is not None:
+        return left_lca
+    elif right_lca is not None:
+        return right_lca
+    else:
+        return None
 
 root = Node(20)
 root.left = Node(8)
@@ -27,3 +33,14 @@ root.left.right.right = Node(14)
 n1 = 10; n2 = 14
 t = findLCA(root, n1, n2)
 print(f"LCA of {n1} and {n2} is {t.value}") # 12
+
+
+#           20  
+#         /    \
+#        8      22
+#      /   \
+#     4    12
+#         /   \
+#       10    14
+
+# https://dpaste.org/FSsrO

@@ -5,26 +5,8 @@ class Node:
         self.data = value
         self.left = None
         self.right = None
-    def value_of_node(self):
-        return self.data
     
 
-a1 = Node(5)
-a2 = Node(3)
-a3 = Node(7)
-a4 = Node(2)
-a5 = Node(4)
-a6 = Node(6)
-a7 = Node(8)
-
-a1.value_of_node()
-
-a1.left = a2
-a1.right = a3
-a2.left = a4
-a2.right = a5
-a3.left = a6
-a3.right = a7
 
 def print_tree(root):
     q = [root]
@@ -36,7 +18,7 @@ def print_tree(root):
         if curr.right:
             q.append(curr.right)
 
-print_tree(a1)
+
 
 def insert_node(root, value):
     curr = root
@@ -55,3 +37,11 @@ def insert_node(root, value):
             else:
                 curr = curr.right
 
+list_node_values = [ 3, 7, 2, 4, 6, 8]
+root = Node(5)
+for value in list_node_values:
+    insert_node(root, value)
+
+print_tree(root)
+
+# https://dpaste.org/t47Dm
