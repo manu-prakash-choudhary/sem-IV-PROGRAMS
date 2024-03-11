@@ -25,7 +25,8 @@ class Stack:
             print("Stack is empty")
         else:
             for i in range(self.top, -1, -1):
-                print(self.stack[i])
+                print(self.stack[i], end=" ")
+            print()
 
     def overflow(self):
         if self.top == self.size - 1:
@@ -39,19 +40,27 @@ class Stack:
         else:
             return False
         
-# Driver code
-if __name__ == "__main__":
-    stack = Stack(5)
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
-    stack.push(4)
-    stack.push(5)
-    stack.display()
-    stack.push(6)
-    stack.push(7)
-    stack.pop()
-    stack.pop()
-    stack.display()
-    print(stack.overflow())
-    print(stack.underflow())
+
+stack = Stack(5)
+stack.push(1)
+print(stack.top, '<-----Top')
+stack.push(2)
+print(stack.top, '<-----Top')
+
+stack.push(3)
+print(stack.top, '<-----Top')
+
+stack.push(4)
+print(stack.top, '<-----Top')
+
+stack.push(5)
+stack.display()  #Output 5 4 3 2 1
+stack.push(6)
+stack.push(7)
+stack.pop()
+stack.pop()
+stack.display()
+print(stack.overflow())
+print(stack.underflow())
+
+# https://dpaste.org/aWkUY
