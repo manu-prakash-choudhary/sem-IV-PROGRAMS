@@ -111,7 +111,7 @@ def postfix_evaluator(expression):
 # infix_expression = "a+b*c-(d/e+f)*g"
 
 # infix_expression2 = "2+2*3-(4/1+2)"
-infix_ = '2*(3+4)-5'
+infix_expression = '2*3+4-5'
 postfix_expression = infix_to_postfix(infix_expression)
 result = postfix_evaluator(postfix_expression)
 print("Infix Expression:", infix_expression)
@@ -176,27 +176,29 @@ PRECEDENCE = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
 
 def infix_to_postfix(infix_expr):
     stack = []
-    postfix = []
+    postfix = ""
 
     for token in infix_expr:
         if token.isalnum():
-            postfix.append(token)
+            postfix += token
         elif token == '(':
             stack.append(token)
         elif token == ')':
             while stack and stack[-1] != '(':
-                postfix.append(stack.pop())
+                postfix += stack.pop()
             if stack:
                 stack.pop()  # Discard the '('
         else:
             while stack and stack[-1] in PRECEDENCE and PRECEDENCE[stack[-1]] >= PRECEDENCE[token]:
-                postfix.append(stack.pop())
+                postfix += stack.pop()
             stack.append(token)
 
     while stack:
-        postfix.append(stack.pop())
+        postfix += stack.pop()
+    
+        
 
-    return ''.join(postfix)
+    return postfix
 
 # Example usage
 infix_expression = "2 * (3 + 4) - 5"

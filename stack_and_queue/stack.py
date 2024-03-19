@@ -24,8 +24,10 @@ class Stack:
         if self.top == -1:
             print("Stack is empty")
         else:
-            for i in range(self.top, -1, -1):
-                print(self.stack[i], end=" ")
+            temp = self.top
+            while temp>=0:
+                print(self.stack[temp], end=" ")
+                temp = temp - 1
             print()
 
     def overflow(self):

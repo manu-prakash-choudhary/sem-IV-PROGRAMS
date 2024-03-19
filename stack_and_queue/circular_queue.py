@@ -4,12 +4,13 @@
 # Front 
 # Rear
 
-
+# https://dpaste.org/cNiUE
 class CircularQueue:
-    def __init__(self, k):
-        self.size = k
-        self.queue = [None] * k
-        self.front = self.rear = -1
+    def __init__(self, size):
+        self.size = size
+        self.queue = [None] * size
+        self.front = -1
+        self.rear = -1
 
     def enqueue(self, value):
         if (self.rear + 1) % self.size == self.front:
@@ -26,6 +27,7 @@ class CircularQueue:
             print("Queue is empty")
         elif self.front == self.rear:
             temp = self.queue[self.front]
+            self.queue[self.front] = None
             self.front = self.rear = -1
             return temp
         else:

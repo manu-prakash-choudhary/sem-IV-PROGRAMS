@@ -15,14 +15,14 @@ def leftView(root, level, max_level):
     leftView(root.left, level+1, max_level)
     leftView(root.right, level+1, max_level)
 
-if __name__=='__main__':
-    root = Node(12)
-    root.left = Node(10)
-    root.right = Node(30)
-    root.right.left = Node(25)
-    root.right.right = Node(40)
-    max_level = [0]
-    leftView(root, 1, max_level)
+
+root = Node(12)
+root.left = Node(10)
+root.right = Node(30)
+root.right.left = Node(25)
+root.right.right = Node(40)
+max_level = [0]
+leftView(root, 1, max_level)
 
 # Agorithm for left View of Binary Tree
 # Create class Node with value, left and right attributes

@@ -12,12 +12,12 @@ def product_of_three_largest(nums):
     distinct_nums = set(nums)
     
     # Pop the three largest distinct elements from the max heap
-    largest_elements = []
+    largest_elements = set()
     while len(largest_elements) < 3:
-        num = -heapq.heappop(max_heap)  # Negate the number back to positive
-        if num in distinct_nums:
-            largest_elements.append(num)
-            distinct_nums.remove(num)
+        num = -heapq.heappop(max_heap)  
+        largest_elements.add(num)
+
+        
     
     # Calculate the product of the three largest distinct elements
     product = 1
